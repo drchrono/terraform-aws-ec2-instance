@@ -5,7 +5,7 @@ locals {
 resource "aws_instance" "this" {
   count = var.instance_count
 
-  lifecycle { ignore_changes = [ami] }
+  lifecycle { ignore_changes = [ami, user_data_base64] }
 
   ami              = var.ami
   instance_type    = var.instance_type
