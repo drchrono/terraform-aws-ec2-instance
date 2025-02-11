@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: terraform-aws-ec2-instance
+  description: Terraform module which creates EC2 instance(s) on AWS
+  annotations:
+    business-unit: EverHealth
+    github.com/project-slug: drchrono/terraform-aws-ec2-instance
+    product: DRC
+spec:
+  type: service
+  lifecycle: production
+  owner: EverHealth
+  implementation:
+    languages:
+    - HCL
+    - Makefile
